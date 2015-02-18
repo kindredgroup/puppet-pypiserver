@@ -1,0 +1,12 @@
+# MANAGED BY PUPPET
+
+description <%= @service_name %>
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+script
+  set -e
+  exec su -l <%= @user %> -c "<%= @service_arguments %>" -s /bin/bash
+end script

@@ -1,0 +1,17 @@
+{
+  "name": "unibet-pypiserver",
+  "version": "0.1.0",
+  "author": "unibet",
+  "summary": "Puppet module to manage python pypiserver repositories",
+  "license": "Apache 2.0",
+  "source": "https://github.com/unibet/puppet-pypiserver.git",
+  "project_page": "https://github.com/unibet/puppet-pypiserver",
+  "issues_url": "https://github.com/unibet/puppet-pypiserver/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+
