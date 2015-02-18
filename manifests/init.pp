@@ -22,9 +22,6 @@
 # [*manage_auth*]
 #   Boolean. Allows authentication in pypiserver
 #
-# [*salt*]
-#   String. Password salt used for users defined in pypiserver
-#
 # [*repository_path*]
 #   String. Base path to repositories
 #
@@ -53,7 +50,6 @@ class pypiserver (
   $service_refresh = true,
   $manage_user     = true,
   $manage_auth     = true,
-  $salt            = 'salt',
   $repository_path = $::pypiserver::params::repository_path,
   $user            = $::pypiserver::params::user,
   $group            = $::pypiserver::params::group

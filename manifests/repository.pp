@@ -10,6 +10,9 @@
 # [*ensure*]
 #   Ensurable
 #
+# [*salt*]
+#   If using auth, for salting the password
+#
 # [*port*]
 #   Listener port
 #
@@ -33,6 +36,7 @@
 #
 define pypiserver::repository (
   $port,
+  $salt         = 'salt',
   $ensure       = 'present',
   $pypi_user    = {},
   $fallback_url = 'http://pypi.python.org/simple'
@@ -42,7 +46,6 @@ define pypiserver::repository (
 
   $user = $::pypiserver::user
   $group = $::pypiserver::group
-  $salt = $::pypiserver::salt
   $service_name = "pypi-${name}"
   $repository_full_path = "${::pypiserver::repository_path}/${name}"
   $repository_password_file = "${::pypiserver::repository_path}/htpasswd_${name}"
