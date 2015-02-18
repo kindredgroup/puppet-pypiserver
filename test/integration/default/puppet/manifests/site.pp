@@ -1,3 +1,4 @@
+package { 'epel-release': ensure => installed } ->
 package { 'python-pip': ensure => installed } ->
 class { '::pypiserver': }
 

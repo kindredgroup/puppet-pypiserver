@@ -20,8 +20,7 @@ end
 group :kitchen do
   gem 'puppet_forge', '<= 1.0.2'
   gem 'test-kitchen'
-  #gem 'kitchen-puppet', :git => 'https://github.com/neillturner/kitchen-puppet.git'
-  gem 'kitchen-puppet', :git => 'https://github.com/jlyheden/kitchen-puppet.git'
+  gem 'kitchen-puppet'
   gem 'kitchen-docker'
   gem 'kitchen-vagrant'
   gem 'vagrant-wrapper'

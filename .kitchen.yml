@@ -14,6 +14,7 @@ driver:
 
 provisioner:
   name: puppet_apply
+  puppet_version: 3.7.3
   modules_path: nevermind
   resolve_with_librarian_puppet: true
   require_chef_for_busser: true
@@ -26,11 +27,10 @@ platforms:
       platform: centos
 <% else %>
 platforms:
-  - name: vbox-centos-64
+  - name: centos-6.5-64-puppet
     driver_plugin: vagrant
     driver_config:
-      box: centos-64-x64-vbox4210
-      box_url: http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box
+      box: puppetlabs/centos-6.5-64-puppet
   - name: vbox-ubuntu-server-12042
     driver_plugin: vagrant
     driver_config:
